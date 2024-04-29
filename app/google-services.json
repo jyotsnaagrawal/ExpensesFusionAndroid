@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "499113611770",
+    "firebase_url": "https://expensefusion-267af-default-rtdb.firebaseio.com",
+    "project_id": "expensefusion-267af",
+    "storage_bucket": "expensefusion-267af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499113611770:android:2b4c1248dc64ff832d1443",
+        "android_client_info": {
+          "package_name": "com.jyotsna.expensesfusion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc4NkWJsc3sidXoMMOZ7h48Vp2zzNfpPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
