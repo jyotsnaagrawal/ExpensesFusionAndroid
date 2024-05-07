@@ -15,8 +15,7 @@
         <!-- Status bar color -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/yellow</item>
 
-        <!-- Customize your theme attributes here -->
-        <!-- Add more customizations as needed -->
+
     </style>
 
     <!-- Style for the outer field of TextInputLayout -->

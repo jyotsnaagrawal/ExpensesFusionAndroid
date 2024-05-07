@@ -4,8 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
@@ -14,21 +12,22 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Enable edge-to-edge display for the activity
         enableEdgeToEdge()
+
+        // Set the layout of the activity
         setContentView(R.layout.activity_main)
 
+        // Initialize Firebase authentication instance
         firebaseAuth = FirebaseAuth.getInstance()
 
+        // Check if the user is not logged in
         if (firebaseAuth.currentUser == null) {
             // If user is not logged in, navigate to SignInActivity
             startActivity(Intent(this, SignInActivity::class.java))
-            finish() // Finish MainActivity to prevent returning to it via Back button
-        }
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+            // Finish MainActivity to prevent returning to it via Back button
+            finish()
         }
     }
 }
